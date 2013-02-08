@@ -1,6 +1,6 @@
 # Ribiprocessing
 
-TODO: Write a gem description
+A really super-slim layer to communicate with Processing from JRuby.
 
 ## Installation
 
@@ -18,8 +18,39 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+``` ruby
+require 'ribiprocessing'
 
+class FlashingLightsSketch < Ribiprocessing::SimpleApp
+
+  attr_reader :random_background
+
+  def initialize(opts={})
+    @random_background = opts[:random_background] || RandomBackground.new(self)
+    super
+  end
+
+  def setup
+    size 800, 600
+  end
+
+  def draw
+    random_background.generate
+  end
+
+end
+
+class RandomBackground
+  include Ribiprocessing::Proxy
+
+  def generate
+    background rand(255), rand(255), rand(255)
+  end
+
+end
+
+FlashingLightsSketch.new({:title=>"Flashing Lights"})
+```
 ## Contributing
 
 1. Fork it
