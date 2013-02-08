@@ -1,4 +1,4 @@
-Copyright (c) 2013 unsymbol
+Copyright (c) 2013 Philip Cunningham
 
 MIT License
 
