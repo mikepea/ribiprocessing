@@ -1,7 +1,7 @@
 module Ribiprocessing
   import "processing.core"
 
-  class SimpleApp < Ribiprocessing::PApplet
+  class SimpleApp < PApplet
 
     attr_reader :title, :args, :opts
 
@@ -25,11 +25,11 @@ module Ribiprocessing
     private
 
     def set_sketch_args
-      set_full_screen_arg
+      set_fullscreen_arg
       set_title_arg
     end
 
-    def set_full_screen_arg
+    def set_fullscreen_arg
       args << "--present" if opts[:fullscreen]
     end
 
