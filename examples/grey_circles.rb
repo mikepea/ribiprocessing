@@ -25,4 +25,4 @@ class GreyCircles < Ribiprocessing::SimpleApp
 
 end
 
-GreyCircles.new({:title=>"Oh so many circles"})
+GreyCircles.new :title=>"Oh so many circles"

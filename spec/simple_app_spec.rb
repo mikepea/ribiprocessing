@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Ribiprocessing::SimpleApp do
 
   before(:each) do
-    @applet = Ribiprocessing::SimpleApp.new({:headless=>true, :fullscreen=>true, :title=>"Gormless"})
+    @applet = Ribiprocessing::SimpleApp.new(:headless=>true, :fullscreen=>true, :title=>"Gormless")
   end
 
   context "standard" do

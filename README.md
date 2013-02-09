@@ -49,7 +49,7 @@ class RandomBackground
 
 end
 
-FlashingLightsSketch.new({:title=>"Flashing Lights"})
+FlashingLightsSketch.new :title=>"Flashing Lights"
 ```
 ## Contributing
 
