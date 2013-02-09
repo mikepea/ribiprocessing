@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Ribiprocessing::SimpleApp do
 
-  APPLET = Ribiprocessing::SimpleApp.new
+  APPLET = Ribiprocessing::SimpleApp.new({:headless=>true})
 
   context "standard" do
     [:setup, :draw].each do |method|
@@ -18,10 +18,6 @@ describe Ribiprocessing::SimpleApp do
     [:alpha, :blue, :brightness, :color, :green, :hue, :lerp_color, :red, :saturation].each do |method|
       it { APPLET.should respond_to(method) }
     end
-  end
-
-  after(:all) do
-    APPLET.exit
   end
 
 end
